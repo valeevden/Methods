@@ -29,6 +29,10 @@ namespace LibraryForMethods
         }
         public static double FindSolutionForEquation(int a, int b, int c)
         {
+            if (a == 0)
+            {
+                throw new Exception("a can't be  0");
+            }
             double x = Convert.ToDouble(c - b) / a; //convert "x" to double and calculate
             return x;
         }

@@ -24,7 +24,7 @@ namespace LibraryForMethods.Tests
         }
 
         [TestCase (1,1)]
-        public void SolveTheEquationNegativeTest(int a, int b)
+        public void SolveTheEquationNegative(int a, int b)
         {
             try
             {
@@ -36,5 +36,6 @@ namespace LibraryForMethods.Tests
             }
                 Assert.Fail();
         }
+
     }
 }
