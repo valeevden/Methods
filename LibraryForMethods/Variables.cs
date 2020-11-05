@@ -22,6 +22,10 @@ namespace LibraryForMethods
         }
         public static int[] MakeDivisionAandModA(int a, int b)
         {
+            if (b == 0)
+            {
+                throw new Exception("b can't be  0");
+            }
             int i = a / b;
             int j = a % b;
             int [] array = new int[] { i, j };
