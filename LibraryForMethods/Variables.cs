@@ -6,6 +6,10 @@ namespace LibraryForMethods
     {
         public static double SolveTheEquation(int a, int b)
         {
+            if (a==b)
+            {
+                throw new Exception("a can't be equal b");
+            }
             double x = Convert.ToDouble(5 * a + b * b) / (b - a); // convert int to double and calculate
             return x;
         }
