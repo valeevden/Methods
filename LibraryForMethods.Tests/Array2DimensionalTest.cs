@@ -39,6 +39,17 @@ namespace LibraryForMethods.Tests
             Assert.AreEqual(expected, actual);
         }
 
+        [TestCase(1, new int[] { 0, 0 })]
+        [TestCase(2, new int[] { 2, 0 })]
+        [TestCase(3, new int[] { 0, 3 })]
+        [TestCase(4, new int[] { 0, 0 })]
+        public void FindMin2DArrayUnitIndexTest(int MockNumber, int[] expected)
+        {
+            int[] actual = Array2Dimensional.FindMin2DArrayUnitIndex(GetArrayMock(MockNumber));
+
+            Assert.AreEqual(expected, actual);
+        }
+
         [TestCase(1, 1)]
         [TestCase(3, 3)]
         [TestCase(4, 4)]
@@ -86,7 +97,7 @@ namespace LibraryForMethods.Tests
                     throw new Exception();
             }
         }
-        // А здесь Мок двумерного массива на выход дял транспорирования
+        // А здесь Мок двумерного массива на выход для транспорирования
         int[,] GetExpMock(int n)
         {
             switch (n)
