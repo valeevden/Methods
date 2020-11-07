@@ -18,6 +18,10 @@ namespace LibraryForMethods
 
         public static int [] MakeArrayMOD_A_from1to1000Equals0(int a)
         {
+            if (a==0)
+            {
+                throw new Exception("a cant be equal 0");
+            }
             int n = 1000 / a; // Определяем размер конечного массива на вывод
             int[] array = new int[n];
             int c = 0;
@@ -203,7 +207,14 @@ namespace LibraryForMethods
             int s; // заводим временную переменную снаружи цикла
             int s2; // заводим временную переменную снаружи цикла
             bool check = false;
-
+            if (a<0)
+            {
+                a *= -1;
+            }
+            if (b<0)
+            {
+                b *= -1;
+            }
             do
             {
                 s = a % 10; // Узнаем последнюю цифру 1 числа
